@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    his_emr_api_radiology (0.0.1)
+    his_emr_api_radiology (0.0.2)
       json (~> 1.8, >= 1.8.3)
       rails (~> 5.2.4, >= 5.2.4.3)
 
