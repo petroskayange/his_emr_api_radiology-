@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'zebra_printer/init'
-class Radiology::RadiologyOrdersController < ::ApplicationController
+class Radiology::RadiologyController < ::ApplicationController
   before_action :authenticate, except: %i[print_order_label ]
   def create
     patient_details, physician_details, radiology_orders = params.require %i[patient_details physician_details radiology_orders]
