@@ -15,7 +15,7 @@ module Radiology
         end
   
   
-        sample_file_path = "/var/www/BHT-EMR-API/config/sample.msi"
+        sample_file_path = "#{Rails.root}/config/sample.msi"
         save_file_path = "/tmp/#{patient_details[:accession_number] }_#{patient_details[:patient_name].gsub(' ', '_')}_scheduled_radiology.msi"
   
         # using eval() might decrease performance, not sure if there's a better way to do this.
@@ -29,7 +29,7 @@ module Radiology
   
        # send created msi file to ftp server
       def send_scheduled_msi(file_path)
-        main_config = YAML.load_file('/var/www/BHT-EMR-API/config/application.yml')
+        main_config = YAML.load_file("#{Rails.root}/config/application.yml")
         # connect with FTP server
         # NOTE: main_config[:ftp_host], main_config[:ftp_user_name], main_config[:ftp_pw] is in application.yml file.
         Net::FTP.open(main_config['ftp_host']) do |ftp|

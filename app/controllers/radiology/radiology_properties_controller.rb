@@ -6,10 +6,10 @@ class Radiology::RadiologyPropertiesController < ::ApplicationController
       file = File.read path
       hash = JSON.parse file
       if value == 'true'
-        hash['encounters']['radiology orders']['available'] = true
+        hash['encounters']['radiology examination']['available'] = true
         hash['encounters']['view radiology results']['available'] = true
       else
-        hash['encounters']['radiology orders']['available'] = false
+        hash['encounters']['radiology examination']['available'] = false
         hash['encounters']['view radiology results']['available'] = false
       end
       File.open path , "w" do |f|

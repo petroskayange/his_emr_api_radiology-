@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    his_emr_api_radiology (0.0.4)
+    his_emr_api_radiology (0.0.5)
       json (~> 1.8, >= 1.8.3)
       rails (~> 5.2.4, >= 5.2.4.3)
 
@@ -171,7 +171,7 @@ GEM
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.1)
-    websocket-driver (0.7.3)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
 
@@ -193,4 +193,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   2.2.16
+   2.2.20
