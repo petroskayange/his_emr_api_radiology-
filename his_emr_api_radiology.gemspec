@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
  
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency 'json', '~> 1.8', '>= 1.8.3'
   spec.add_dependency 'rails', '~> 5.2.4', '>= 5.2.4.3'
 
   spec.add_development_dependency 'bcrypt', '~> 3.1.0'

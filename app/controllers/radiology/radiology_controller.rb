@@ -7,6 +7,9 @@ class Radiology::RadiologyController < ::ApplicationController
     radiology_orders = service.generate_msi(patient_details,physician_details, radiology_orders)
     render json: radiology_orders, status: :created
   end
+  def show
+    render json: service.get_radiology_orders(params[:id])
+  end
   def print_order_label
     label = service.print_radiology_barcode(params[:accession_number],params[:patient_national_id], params[:patient_name], params[:radio_order], params[:date_created])
     send_data(label, type: 'application/label; charset=utf-8',
