@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    his_emr_api_radiology (0.0.5)
-      json (~> 1.8, >= 1.8.3)
+    his_emr_api_radiology (0.0.7)
       rails (~> 5.2.4, >= 5.2.4.3)
 
 GEM
@@ -66,12 +65,11 @@ GEM
       railties (>= 5.0.0)
     faker (2.16.0)
       i18n (>= 1.6, < 2)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (0.5.2)
+      activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
-    json (1.8.6)
     json-schema (2.8.1)
       addressable (>= 2.4)
     loofah (2.9.1)
@@ -82,8 +80,12 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
-    nio4r (2.5.7)
+    nio4r (2.5.8)
+    nokogiri (1.11.3)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
     parallel (1.20.1)
@@ -176,6 +178,7 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
