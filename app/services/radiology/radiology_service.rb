@@ -85,6 +85,10 @@ module Radiology
         ", concept_id).joins("INNER JOIN concept_set s ON
         s.concept_id = concept_name.concept_id").group("concept_name.concept_id").order(:name)
       end
+
+      def get_previous_orders(patient_id)
+        Observation.where("person_id = ?  AND voided =0 AND concept_id = 8426",patient_id).order('obs_datetime DESC')
+      end
     end
   end
 end

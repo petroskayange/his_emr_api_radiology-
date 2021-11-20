@@ -10,6 +10,11 @@ class Radiology::RadiologyController < ::ApplicationController
   def show
     render json: service.get_radiology_orders(params[:id])
   end
+
+  def index
+    render json: service.get_previous_orders(params[:patient_id])
+  end
+
   def print_order_label
     label = service.print_radiology_barcode(params[:accession_number],params[:patient_national_id], params[:patient_name], params[:radio_order], params[:date_created])
     send_data(label, type: 'application/label; charset=utf-8',
