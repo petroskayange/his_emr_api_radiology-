@@ -1,24 +1,26 @@
-require_relative "lib/radiology/version"
+# frozen_string_literal: true
+
+require_relative 'lib/radiology/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = "his_emr_api_radiology"
+  spec.name        = 'his_emr_api_radiology'
   spec.version     = Radiology::VERSION
-  spec.authors     = ["petros"]
-  spec.email       = ["kayangepetros@gmail.com"]
-  spec.homepage    = "https://github.com/petroskayange/his_emr_api_radiology"
-  spec.summary     = "Radiology extension for the HIS-EMR-API"
+  spec.authors     = ['petros']
+  spec.email       = ['kayangepetros@gmail.com']
+  spec.homepage    = 'https://github.com/petroskayange/his_emr_api_radiology'
+  spec.summary     = 'Radiology extension for the HIS-EMR-API'
   spec.description = "This adds a radiology interface to the OpenMRS compatible core API provided by
                       [HIS-EMR-API](https://github.com/EGPAFMalawiHIS/HIS-EMR-API)."
-  spec.license     = "MIT"
+  spec.license     = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
 
-  spec.metadata["homepage_uri"] = spec.homepage
- 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.metadata['homepage_uri'] = spec.homepage
 
-  spec.add_dependency 'rails', "~> 7.0.6"
+  spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+
+  spec.add_dependency 'rails', '>= 7.0.6'
 
   spec.add_development_dependency 'bcrypt', '~> 3.1.0'
   spec.add_development_dependency 'factory_bot_rails', '~> 6.1.0'
